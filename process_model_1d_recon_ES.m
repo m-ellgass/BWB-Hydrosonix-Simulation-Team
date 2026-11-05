@@ -8,7 +8,7 @@ fname='1d_sim_cs_6.mat';
 
 load(fname)
 fprintf(1, ['Loading.....',fname,'\n']);
-dirname='C:\Users\E-Mily\Desktop\BWB\Outputs';
+dirname='/MATLAB Drive/BWB Hydration Simulation/outputs';
 mkdir(dirname)
 
 %% Choose display options
