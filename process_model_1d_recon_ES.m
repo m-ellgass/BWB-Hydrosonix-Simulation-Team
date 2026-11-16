@@ -1,3 +1,23 @@
+%  OUTPUT FIGURES OF THIS SCRIPT
+%  1. XT plot: surface velocity (color) vs. time (ms, x-axis) and lateral
+%     position (mm, y-axis). Red-blue colormap, limits +/-1.
+%     Saved as xtplot_0.png
+%           - the slope is the wave speed (position over time)
+%           - Straight, parallel stripes that keep their shape mean the wave 
+%             is nondispersive: every frequency travels at the same speed, 
+%             so the pulse doesn't spread out (ideal plain wave)
+%  2. FK plot: 2D Fourier transform of the XT data. Frequency (kHz) on the
+%     x-axis, wavenumber (1/mm) on the y-axis, power in dB (-40 to 0 dB).
+%     Saved as xtplot_0.png (overwrites figure 1 in current code)
+%  3. NCC figure (do_corr). Top: XT plot titled with the NCC group velocity.
+%     Bottom: group velocity vs. position, y-axis fixed to cs +/- 1 m/s.
+%     Saved as corr_0.png.
+%  4. Envelope figure (do_env). XT plot with blue dots (envelope peak arrival
+%     time at each position), a black fit line (slope = group velocity), and
+%     dashed green lines (95% confidence bounds). Saved as env_0.png.
+%  5. TTP figure (do_ttp). Same as figure 4 but without the blue dots.
+%     TTP = time to peak. Saved as ttp_0.png.
+
 %% Setup
 clear all; close all; clc; 
 set(0,'DefaultFigureWindowStyle','docked') %keeps figures docked in desktop version
